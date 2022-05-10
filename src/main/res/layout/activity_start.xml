@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".Start">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150sp"
+        android:text="Tap the tiles"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+            <TextView
+                android:id="@+id/green_points"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="20 points"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="29dp"
+                app:srcCompat="@android:drawable/bottom_bar" />
+
+            <TextView
+                android:id="@+id/black_points"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="10 points"
+                android:paddingLeft="10dp"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60sp"
+        android:text="Start"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:onClick="startGame"
+        />
+
+
+</LinearLayout>
