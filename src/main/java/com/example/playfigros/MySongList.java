@@ -24,7 +24,9 @@ import java.util.ArrayList;
 
 public class MySongList extends AppCompatActivity {
     private RecyclerView recyclerView;
-   // private ArrayList<Song> songList;
+    private ImageView back;
+
+    // private ArrayList<Song> songList;
    // private SongListAdapter adapter;
    // private FirebaseFirestore db;
 
@@ -35,6 +37,7 @@ public class MySongList extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(new SongListAdapter());
 
+        back = findViewById(R.id.back_to_homepage);
 
     }
     @Override
@@ -54,6 +57,13 @@ public class MySongList extends AppCompatActivity {
 
         initAll();
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), com.example.playfigros.HomeActivity.class));
+                finish();
+            }
+        });
 
     }
 

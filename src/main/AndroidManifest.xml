@@ -10,19 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayFigros">
         <activity
-            android:name=".Start"
+            android:name=".SettingsActivity"
             android:exported="false"
-            android:screenOrientation="sensorLandscape"/>
+            android:screenOrientation="sensorLandscape"
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".MySongList"
-            android:exported="true"
-            android:screenOrientation="sensorLandscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".Start"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".Result"
             android:exported="false"
@@ -31,6 +30,16 @@
             android:name=".MainActivity"
             android:exported="false"
             android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

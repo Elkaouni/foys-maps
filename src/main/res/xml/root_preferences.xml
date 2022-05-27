@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Game Play">
+
+        <EditTextPreference
+            app:key="Account"
+            app:title="Account"
+            app:useSimpleSummaryProvider="true" />
+
+        <CheckBoxPreference
+            android:key="notifs enabled"
+            android:title="Enable Notifications" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Control Game play">
+
+        <SwitchPreferenceCompat
+            app:key="hitsound"
+            app:title="Enable Hit sound" />
+
+        <SeekBarPreference
+            app:key="note_size"
+            app:title="Change Note Size"
+            android:defaultValue="50"/>
+
+        <SeekBarPreference
+            app:key="contrast"
+            app:title="Background Contrast"
+            app:useSimpleSummaryProvider="true"
+            android:defaultValue="50"/>
+
+        <SeekBarPreference
+            app:key="music_volume"
+            app:title="Music Volume"
+            android:defaultValue="100"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
