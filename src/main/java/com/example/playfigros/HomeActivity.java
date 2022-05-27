@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private ImageView open_about;
+    private ImageView open_about, account;
     private ConstraintLayout about_menu;
     private Button close_about;
     private Button playGame;
@@ -25,6 +25,7 @@ public class HomeActivity extends AppCompatActivity {
     private LinearLayout leave_popup;
 
     public void initAll(){
+        account = findViewById(R.id.account);
         open_about = findViewById(R.id.about_button);
         close_about = findViewById(R.id.ok_aboutUS);
         playGame = findViewById(R.id.play);
@@ -102,7 +103,7 @@ public class HomeActivity extends AppCompatActivity {
         quit2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                finishAffinity();
                 System.exit(1);
             }
         });
