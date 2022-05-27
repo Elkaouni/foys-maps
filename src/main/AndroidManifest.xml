@@ -11,6 +11,10 @@
         android:theme="@style/Theme.PlayFigros">
         <activity
             android:name=".Start"
+            android:exported="false"
+            android:screenOrientation="sensorLandscape"/>
+        <activity
+            android:name=".MySongList"
             android:exported="true"
             android:screenOrientation="sensorLandscape">
             <intent-filter>

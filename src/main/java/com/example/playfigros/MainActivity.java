@@ -5,8 +5,10 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
     private  int CurrantNbreButton;
 
 
-
     // view elements
     private TextView score_label;
-    private TextView tap_to_start, feedback, chances;
+    private CardView tap_to_start;
+    private TextView feedback, chances;
     private FrameLayout frame;
     private CardView line;
     private ImageView pause;
@@ -109,6 +111,26 @@ public class MainActivity extends AppCompatActivity {
     private int start=0;
     private float init_X, init_Y;
 
+    // Song Data
+    private String map_title;
+    private String author;
+    private int song_cover;
+    private int song_wallpaper;
+    private int song_mp3;
+    private void getIntenExtras(){
+        map_title = getIntent().getStringExtra("song_title") ;
+        author = getIntent().getStringExtra("song_author");
+        song_cover = getIntent().getIntExtra("song_cover",0);
+        song_wallpaper = getIntent().getIntExtra("song_map_bg",0);
+        song_mp3 = getIntent().getIntExtra("song_mp3",0);
+    }
+    public void passExtras(Intent intent){
+        intent.putExtra("song_title", map_title);
+        intent.putExtra("song_author", author);
+        intent.putExtra("song_cover", song_cover);
+        intent.putExtra("song_map_bg", song_wallpaper);
+        intent.putExtra("song_mp3", song_mp3);
+    }
 
     void initAll(){
         //get screen size
@@ -119,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
         screenHeight = size.y;
         screenWidth = size.x;
 
+
+        //get elements
         score_label = findViewById(R.id.score_label);
         chances = findViewById(R.id.chances);
         tap_to_start = findViewById(R.id.tap_to_start);
@@ -149,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
 
         black_btn_width = black_buttons[0].getHeight();
         green_btn_width = green_buttons[0].getHeight();
-
         init_X = black_btn_width;
         init_Y = - ScreenOffsetY;
 
@@ -190,7 +213,16 @@ public class MainActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
 
         setContentView(R.layout.activity_main);
+
+        //get extras from intent
+        getIntenExtras();
+        Log.e("song_wallpaper", String.valueOf(song_wallpaper));
+        Log.e("song_cover", String.valueOf(song_cover));
+        Log.e("song_mp3", String.valueOf(song_mp3));
+
+        findViewById(R.id.background_map).setBackground(getResources().getDrawable(song_wallpaper));
         game_mode = getIntent().getStringExtra("game_mode");
+
         if(getIntent() !=null) {
             if(game_mode.equals("easy")){
                 pas_win = e_pas_win;
@@ -212,7 +244,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         soundPlayer = new SoundPlayer(this);
-        ring= MediaPlayer.create(MainActivity.this,R.raw.disorder_hyun);
+        //ring= MediaPlayer.create(MainActivity.this, R.raw.chronos_cepheid);
+
+        ring= MediaPlayer.create(MainActivity.this, song_mp3);
+
+
+
         try {
             ring.prepareAsync();
         } catch (Exception e) {
@@ -252,8 +289,6 @@ public class MainActivity extends AppCompatActivity {
                 pause.setImageResource(R.drawable.pause);
                 pause_menu.setVisibility(View.GONE);
                 tap_to_start.setVisibility(View.VISIBLE);
-
-
             }
         });
 
@@ -268,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent(getApplicationContext(), Start.class);
+                passExtras(intent);
                 startActivity(intent);
 
             }
@@ -481,6 +517,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("good", good);
             intent.putExtra("miss", miss);
             intent.putExtra("game_mode", game_mode);
+            passExtras(intent);
 
             startActivity(intent);
         }
