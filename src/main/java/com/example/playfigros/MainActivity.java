@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout frame;
     private CardView line;
     private ImageView pause;
+    private Button pause_quit, pause_resume;
+    private LinearLayout pause_menu;
     private ImageView[] black_buttons = new ImageView[nb_buttons];
     private ImageView[] green_buttons = new ImageView[nb_buttons];
 
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     private float timer_feedback =  0;
 
     //status check
-    private boolean start_flag = false;
+    private boolean start_flag = false, pause_flag=false;
 
     // touch mode
     private float xx, yy;
@@ -121,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
         feedback = findViewById(R.id.feedback);
         frame = findViewById(R.id.frame);
         pause = findViewById(R.id.pause);
+        pause_menu = findViewById(R.id.pause_menu);
+        pause_resume = findViewById(R.id.pause_resume);
+        pause_quit = findViewById(R.id.pause_quit);
         line = findViewById(R.id.limit);
         chances.setText("Chances : " + max_misses);
 
@@ -164,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         timer_feedback = 0;
+        pause_quit.setBackgroundColor(Color.RED);
+        pause_resume.setBackgroundColor(Color.rgb(3,218,197));
         feedback.setVisibility(View.GONE);
     }
 
@@ -221,20 +230,56 @@ public class MainActivity extends AppCompatActivity {
         line.setX(black_buttons[0].getHeight());
 
         pause.setOnClickListener((view) -> {
-            if(start_flag){
+            if(!pause_flag){
                 start_flag = false;
+                pause_flag = true;
                 if(ring.isPlaying())
                     ring.pause();
                 timer.cancel();
                 //timer =null;
                 pause.setImageResource(android.R.drawable.ic_media_play);
-                tap_to_start.setVisibility(View.VISIBLE);
-                tap_to_start.setText("Pause");
+                pause_menu.setVisibility(View.VISIBLE);
+                //tap_to_start.setVisibility(View.VISIBLE);
+                //tap_to_start.setText("Pause");
             }
         });
+
+        pause_resume.setOnClickListener((view) -> {
+            if(pause_flag){
+                pause_flag = false;
+                start_flag = false;
+                Log.e("e", "---- resume game");
+                pause.setImageResource(R.drawable.pause);
+                pause_menu.setVisibility(View.GONE);
+                tap_to_start.setVisibility(View.VISIBLE);
+
+
+            }
+        });
+
+        pause_quit.setOnClickListener((view) -> {
+            if(pause_flag){
+                pause_flag = false;
+                start_flag = false;
+                Log.e("e", "---- Quit game");
+                if(ring.isPlaying()) {
+                    ring.stop();
+                    ring.release();
+                }
+
+                Intent intent = new Intent(getApplicationContext(), Start.class);
+                startActivity(intent);
+
+            }
+        });
+
+
+
         frame.setOnTouchListener((view, motionEvent) -> {
-            if(!start_flag){
+            if(!start_flag && !pause_flag){
                 start_flag = true;
+                pause_flag = false;
+
                 if(!ring.isPlaying())
                     ring.start();
                 pause.setImageResource(R.drawable.pause);
@@ -420,7 +465,7 @@ public class MainActivity extends AppCompatActivity {
         score_label.setText("Score: "+score);
        if(win_or_loose()!=2){
             start_flag = false;
-            Log.e("e", "timer will be canceled");
+            Log.e("e", "Game done");
           //  timer.cancel();
           //  timer = null;
          //  Log.e("e", "timer was canceled !!");

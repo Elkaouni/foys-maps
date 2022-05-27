@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PlayFigros</string>
+    <string name="quit">Quit</string>
 </resources>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,7 +11,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
     android:background="@drawable/disorder_map" >
-
 
     <FrameLayout
         android:id="@+id/frame"
@@ -24,6 +27,150 @@
             android:text=""
             app:cardBackgroundColor="@color/white" />
 
+        <!-- 20 black tiles-->
+        <ImageView
+            android:id="@+id/btn_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/btn_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+        <ImageView
+            android:id="@+id/btn_10"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/bottom_bar" />
+
+
+        <!-- 20 green tiles-->
+
+        <ImageView
+            android:id="@+id/green_1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_6"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_7"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_8"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_9"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
+
+        <ImageView
+            android:id="@+id/green_10"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,151 +221,42 @@
             android:textColor="#A1FFF6"
             android:textSize="50sp" />
 
-        <!-- 20 black tiles-->
-        <ImageView
-            android:id="@+id/btn_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <LinearLayout
+            android:id="@+id/pause_menu"
+            android:layout_width="330dp"
+            android:layout_height="116dp"
             android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar"
-            tools:ignore="ContentDescription" />
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:textAlignment="center">
 
-        <ImageView
-            android:id="@+id/btn_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+                <Button
+                    android:id="@+id/pause_quit"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Quit"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+                <Button
+                    android:id="@+id/pause_resume"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Resume"
+                    android:textSize="20sp" />
 
-        <ImageView
-            android:id="@+id/btn_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
-
-        <ImageView
-            android:id="@+id/btn_10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/bottom_bar" />
+            </LinearLayout>
 
 
-        <!-- 20 green tiles-->
-
-        <ImageView
-            android:id="@+id/green_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
-        <ImageView
-            android:id="@+id/green_10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/button_onoff_indicator_on" />
-
+        </LinearLayout>
         <TextView
             android:id="@+id/feedback"
             android:layout_width="334dp"
@@ -230,8 +268,22 @@
             android:textAlignment="center"
             android:textColor="#00FF5F"
             android:textSize="30sp"  />
+        <TextView
+            android:id="@+id/feedback_ng"
+            android:layout_width="334dp"
+            android:layout_height="59dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30sp"
+            android:text="Missed :/"
+            android:visibility="invisible"
+            android:textAlignment="center"
+            android:textColor="#7C0A0A"
+            android:textSize="30sp"  />
 
     </FrameLayout>
+
+
+
 
 
 
