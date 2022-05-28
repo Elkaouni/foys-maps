@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "433908042091",
+    "firebase_url": "https://foys-2022-default-rtdb.firebaseio.com",
+    "project_id": "playfigros-2022",
+    "storage_bucket": "playfigros-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433908042091:android:597c7ffdeffdb7f9b8e42e",
+        "android_client_info": {
+          "package_name": "com.example.foys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf8AxkjzsoMLQZv2M-gqyNqjcp8yS9iYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433908042091:android:2981363d6458fc82b8e42e",
+        "android_client_info": {
+          "package_name": "com.gl.foys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf8AxkjzsoMLQZv2M-gqyNqjcp8yS9iYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433908042091:android:a462d23c0226d1c2b8e42e",
+        "android_client_info": {
+          "package_name": "org.app.foys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433908042091-gq7t953pcn4o2srsa6o202nf5glemnr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.app.foys",
+            "certificate_hash": "4b06dfccb8911feff13fa88eb4c7dfd90ccdedb4"
+          }
+        },
+        {
+          "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf8AxkjzsoMLQZv2M-gqyNqjcp8yS9iYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433908042091-ktr63bg98lbq63p1usm78v1cauba1r7l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
