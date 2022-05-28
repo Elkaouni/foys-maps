@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <array name="preloaded_fonts" translatable="false">
-        <item>@font/bad_script</item>
-        <item>@font/cherry_cream_soda</item>
-        <item>@font/la_belle_aurore</item>
-    </array>
-</resources>
